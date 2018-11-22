@@ -1,2 +1,2 @@
 # Geckos-Team-05
-Add-project-description-here | Voyage-7 | https://chingu.io/
+we dem geckos | Voyage-7 | https://chingu.io/
