@@ -1,0 +1,164 @@
+.wrapper {
+    display: grid;
+    grid-template-columns:repeat(3, 1fr); 
+    grid-auto-rows: minmax(100, auto);
+    grid-gap: 1em;
+    color: #000;
+}
+
+.main-wrapper {
+    height: 600px;
+    grid-column: 1/4;
+    background-image: url('img/schrute-gate.jpg');
+    background-size: cover;
+    grid-gap: 1em;
+}
+header {
+    background: #ddd;
+    height: 33px;
+    width: 810px;
+    margin-top: 94px;
+    margin-left: 20%;
+    padding: auto;
+    
+}
+.nav-header {
+    grid-column: 1/4;
+    grid-auto-rows: 75px;
+    text-align: center;
+    
+}
+.nav-header ul {
+    list-style-type: none;
+}
+.nav-header li {
+    float: left;
+}
+.nav-header li a {
+    display: block;
+}
+.left-nav {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+#schrute-logo {
+    height: 125px;
+    width: 149px;
+}
+.right-nav {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+main {
+    grid-auto-rows: minmax(300px, auto);
+    grid-column: 1/4;
+    background: #ddd;
+    clear: both;
+    padding-bottom: 30px;
+}
+.info {
+    grid-column: 1/4;
+    height: 350px;
+    background: #333;
+    padding: 30px 0;
+}
+.info-tile1 {
+    height: 343px;
+    background: #fff;
+    width: 25%;
+    float: left;
+    grid-gap: 2em;
+    border: 1px solid #000;
+    margin-right: 40px;
+    margin-left: 46px;
+}
+.info-tile2 {
+    height: 343px;
+    width: 25%;
+    background: #ddd;
+    float: left;
+    grid-gap: 2em;
+    border: 1px solid #000;
+    margin-right: 40px;
+}
+.info-tile3 {
+    height: 343px;
+    width: 25%;
+    background: #fff;
+    float: left;
+    grid-gap: 2em;
+    border: 1px solid #000;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+h3 {
+    text-align: center;
+    padding-top: 30%;
+}
+.about-main {
+    width: 647px;
+    background: #fff;
+    clear: both;
+    float: left;
+    grid-gap: 2em;
+    border: 1px solid #000;
+    padding: 30px;
+    margin-left: 46px;
+}
+aside {
+    background: #333;
+    align-self: end;
+    width: 25%;
+    float: left;
+    grid-gap: 2em;
+    border: 1px solid #000;
+    height: 336px;
+    margin-left: 40px;
+    padding-top: 35px;
+}
+footer {
+    grid-column: 1/4;
+    background: #121212;
+    
+}
+.nav-footer {
+    grid-column: 1/4;
+    grid-auto-rows: 75px;
+}
+
+.nav-footer ul {
+    list-style-type: none;
+   
+}
+
+.nav-footer li {
+    float: left;
+}
+
+.nav-footer li a {
+    display: block;
+    color: #fff;
+}
+
+.left-nav {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.right-nav {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.copy {
+    grid-column: 1/4;
+    clear: both;
+    padding-top: 25px;
+    text-align: center;
+}
+.site-credit {
+    clear: both;
+    padding-top: 15px;
+    text-align: center;
+}
