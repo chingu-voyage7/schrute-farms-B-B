@@ -37,6 +37,14 @@ app.get('/rooms', (req,res) => {
   res.render('rooms.hbs');
 });
 
+app.get('/amenities', (req,res) => {
+  res.render('amenities.hbs');
+});
+
+app.get('/contact', (req,res) => {
+  res.render('contact.hbs');
+});
+
 app.listen(port, () => {
   console.log(`Server is up and running on port ${port}`);
 });
