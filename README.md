@@ -22,3 +22,5 @@ In the terminal run `node server.js` to start up the server on port 3000. Naviga
 Alternatively, you can run `nodemon server.js` which will behave the same as above except it will live-reload when the server.js file is saved.  HTML & CSS changes should be automatically reflected here too.
 
 **Note that links to static files like image assets and css files should work without issue.  Many of the URLs linking to internal pages however still need be updated to `/` for the home page, `/about` for the About page, `/rooms` for the Rooms page and so on.
+
+_The navigation links on the home page have been updated, but not the rest._
