@@ -1,4 +1,4 @@
-.wrapper {
+.container-fluid {
     display: grid;
     grid-template-columns:repeat(3, 1fr); 
     grid-auto-rows: minmax(100, auto);
@@ -17,14 +17,12 @@ header {
     background: #ddd;
     height: 33px;
     width: 810px;
-    margin-top: 94px;
-    margin-left: 20%;
-    padding: auto;
+    
+
     
 }
 .nav-header {
-    grid-column: 1/4;
-    grid-auto-rows: 75px;
+    
     text-align: center;
     
 }
