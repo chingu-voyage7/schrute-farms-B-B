@@ -1,3 +1,4 @@
+// These lines integrate external modules/functionality into the nodeJS file
 const express = require('express');
 const hbs = require('hbs');
 
@@ -12,6 +13,7 @@ var app = express();
 
 // This tells the express app that we were using handlebars (i.e. hbs) to render the html to the server
 // there are a bunch of other rendering engines that we could use like pug (aka jade) etc.
+// Rendering engines have lots of functionality (e.g. templating) that we won't be using for this app, but FYI all the same
 app.set('view engine', 'hbs');
 
 // this line tells the app where to look for static files (e.g. CSS and img files)
@@ -21,6 +23,7 @@ app.use(express.static(__dirname));
 
 // --------  Establishing the "routes" ----------- //
 
+// route for the home page is the 'root' of the domain, i.e. '/'
 app.get('/', (req,res) => {
   res.render('index.hbs');
 });
