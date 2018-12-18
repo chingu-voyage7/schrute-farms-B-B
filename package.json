@@ -1,0 +1,25 @@
+{
+  "name": "schrute-farms-bnb",
+  "version": "1.0.0",
+  "description": "we dem geckos | Voyage-7 | https://chingu.io/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chingu-voyage7/Geckos-Team-05.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chingu-voyage7/Geckos-Team-05/issues"
+  },
+  "homepage": "https://github.com/chingu-voyage7/Geckos-Team-05#readme",
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  },
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
