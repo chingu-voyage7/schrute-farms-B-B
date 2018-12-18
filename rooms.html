@@ -11,18 +11,37 @@
 			<div class="bedroom">
 				<!-- Focal Image / Gallery Carousel as background of div wrapper?-->
 				<header>
-					<nav class="nav-header">
-						<ul>
-                            <li class="left-nav"><a href="#">Home</a></li>
-                            <li class="left-nav"><a href="#">About</a></li>
-							<li class="left-nav current"><a href="#">Rooms</a></li>
-							<li class="left-nav"><a href="#">Amenities</a></li>
-							<!-- can use flex to change order for mobile/tablet view? -->
-							<li class="logo-nav"><a href="#"><img src="img/schrute-logo.jpg" alt="Schrute Farms Logo" id="schrute-logo"></a></li>
-							<li class="right-nav"><a href="#">Reservations</a></li>
-							<li class="right-nav"><a href="#">Contact</a></li>
-						</ul>
-					</nav>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	<a class="navbar-brand" href="index.html">Shrute Farms Bed &amp; Breakfast</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+	 aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarNavDropdown">
+		<ul class="navbar-nav">
+			<li class="nav-item active">
+				<a class="nav-link" href="index.html">Home</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="about.html">About</a>
+			</li>
+			<li class="nav-item">
+			<a class="nav-link" href="rooms.html">Rooms<span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+				 aria-haspopup="true" aria-expanded="false">
+					More
+				</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+					<a class="dropdown-item" href="#">Reservations</a>
+					<a class="dropdown-item" href="#">Amenities</a>
+					<a class="dropdown-item" href="#">Contact Us</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+</nav>
 				</header>
 			</div>
 

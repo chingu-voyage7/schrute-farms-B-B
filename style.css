@@ -1,5 +1,6 @@
 body {
     background-color: #f2eedf;
+    font-family: 'Roboto',sans-serif;
 }
 /*
 wrapper {
@@ -41,61 +42,56 @@ header {
 .nav-header li a {
     display: block;
 }
-.left-nav {
-    padding-left: 15px;
-    padding-right: 15px;
-}
-#schrute-logo {
-    height: 125px;
-    width: 149px;
-}
-.right-nav {
-    padding-left: 15px;
-    padding-right: 15px;
-}
 main {
     grid-auto-rows: minmax(300px, auto);
     grid-column: 1/4;
-    background: #ddd;
+    background: #f2eedf;
     clear: both;
     padding-bottom: 30px;
 }
 .info {
     grid-column: 1/4;
     height: 350px;
-    background: #333;
+    background: #f2eedf;
     padding: 30px 0;
+    
 }
+
 .info-tile1 {
     height: 343px;
     background: #fff;
-    width: 25%;
     float: left;
     grid-gap: 2em;
     border: 1px solid #000;
-    margin-right: 40px;
-    margin-left: 46px;
+    background-image: url('img/lodging.jpg');
+    background-size: cover;
+    
 }
 .info-tile2 {
     height: 343px;
-    width: 25%;
     background: #ddd;
     float: left;
     grid-gap: 2em;
     border: 1px solid #000;
-    margin-right: 40px;
+    background-image: url('img/reservation.jpg');
+    background-size: cover;
+    
 }
 .info-tile3 {
     height: 343px;
-    width: 25%;
     background: #fff;
     float: left;
     grid-gap: 2em;
     border: 1px solid #000;
+    background-image: url('img/bandb.jpg');
+    background-size: cover;
 }
 a {
     text-decoration: none;
-    color: #000;
+    color: #760428;
+}
+a:visited, a:focus, a:active {
+    color: #747474;
 }
 h2 {
     color: #760428;
@@ -104,7 +100,8 @@ h2 {
 h3 {
     text-align: center;
     padding-top: 30%;
-    color: #760428
+    color: #760428;
+    font-family: 'Playfair Display',serif;
 }
 .about-main {
     width: 647px;
@@ -131,36 +128,10 @@ aside {
 footer {
     grid-column: 1/4;
     background: #747474;
-    color: #760428
-    
+    color: #760428;
 }
-.nav-footer {
-    grid-column: 1/4;
-    grid-auto-rows: 75px;
-}
-
-.nav-footer ul {
-    list-style-type: none;
-   
-}
-
-.nav-footer li {
-    float: left;
-}
-
-.nav-footer li a {
-    display: block;
-    color: #fff;
-}
-
-.left-nav {
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-.right-nav {
-    padding-left: 15px;
-    padding-right: 15px;
+#carouselExampleFade {
+    margin-top: -34px;
 }
 .copy {
     grid-column: 1/4;
@@ -174,28 +145,27 @@ footer {
     text-align: center;
 }
 .center-title {
-    color: #fff;
     padding-top: 5%;
     text-shadow: 0 0 3px rgb(54, 53, 53);
 }
 
 .green-box {
-    background-color: #69865F;
-    border: solid 1px #fff;
+    background-color: #40000d;
+    border: solid 1px #747474;
     margin-top: 20%;
     font-size: 2em;
     width: 75%;
     height: 250px;
     padding-top: 20%;
-    color: #fff;
+    color: #f2eedf;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .red-barn {
-    height:350px;
+    height: 55vh;
     width: 100%;
     background-image: url('img/red-barn.jpg');
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 .bedroom {
@@ -211,4 +181,10 @@ footer {
     width: 284px;
     height: 212px;
   
+}
+.gecko-coloring {
+    color: #40000d;
+}
+.coloring {
+    color: #f2eedf;
 }

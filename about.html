@@ -12,18 +12,37 @@
 			<div class="red-barn">
 				<!-- Focal Image / Gallery Carousel as background of div wrapper?-->
 				<header>
-					<nav class="nav-header">
-						<ul>
-                            <li class="left-nav"><a href="#">Home</a></li>
-                            <li class="left-nav current"><a href="#">About</a></li>
-							<li class="left-nav"><a href="#">Rooms</a></li>
-							<li class="left-nav"><a href="#">Amenities</a></li>
-							<!-- can use flex to change order for mobile/tablet view? -->
-							<li class="logo-nav"><a href="#"><img src="img/schrute-logo.jpg" alt="Schrute Farms Logo" id="schrute-logo"></a></li>
-							<li class="right-nav"><a href="#">Reservations</a></li>
-							<li class="right-nav"><a href="#">Contact</a></li>
-						</ul>
-					</nav>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	<a class="navbar-brand" href="index.html">Shrute Farms Bed &amp; Breakfast</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+	 aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarNavDropdown">
+		<ul class="navbar-nav">
+			<li class="nav-item active">
+				<a class="nav-link" href="index.html">Home</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="about.html">About<span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="rooms.html">Rooms</a>
+			</li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+				 aria-haspopup="true" aria-expanded="false">
+					More
+				</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+					<a class="dropdown-item" href="reservations.html">Reservations</a>
+					<a class="dropdown-item" href="amenities.html">Amenities</a>
+					<a class="dropdown-item" href="contact.html">Contact Us</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+</nav>
 				</header>
 			</div>
 
@@ -47,7 +66,7 @@
 				</section>
                 <section class="col-md-4 col-sm-4 right-column">
                     <!-- call to action class for buttons "book now" etc-->
-                    <div class="green-box call-to-action text-center"><a href="#">Availability and Reservations</a></div>
+                    <div class="green-box call-to-action text-center"><a href="reservations.html"><span class="coloring">Availability and Reservations</span></a></div>
                     <div class="green-box local-map">
                         <p class="text-center">Map of Schrute Farms</p>
                         <!-- Replace this with a small image of the farm map.  On click, map opens as an overlay image?
@@ -57,29 +76,15 @@
 				</div>
 			</main>
 			<footer>
-				<nav class="nav-footer">
-					<!-- change up links in footer nav from header nav?? -->
-				<ul>
-					<li class="left-nav"><a href="#">Home</a></li>
-					<li class="left-nav"><a href="#">Rooms</a></li>
-					<li class="left-nav"><a href="#">Amenities</a></li>
-					<!-- can use flex to change order for mobile/tablet view? -->
-					<li class="logo-nav"><a href="#">Schrute Farms B&B</a></li>
-					<li class="right-nav"><a href="#">Reservations</a></li>
-					<li class="right-nav"><a href="#">Contact</a></li>
-				</ul>
-				</nav>
-
+				
 				<p class="copy">Copyright &copy; 2018, Schrute Farms, LLC. All Rights Reserved.</p>
 
-				<p class="site-credit"><small>Designed by Chingu Voyage 7: <a href="https://github.com/chingu-voyage7/Geckos-Team-05">Geckos Team 5</a> with &hearts;</small></p>
+				<p class="site-credit"><small>Designed by Chingu Voyage 7: <a href="https://github.com/chingu-voyage7/Geckos-Team-05"><span class="gecko-coloring">Geckos Team 5</span></a> with &hearts;</small></p>
 			</footer>
 		</div>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
- crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
- crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
- crossorigin="anonymous"></script>
+		<!--Bootstrap Javascript-->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 	</body>
 </html>
