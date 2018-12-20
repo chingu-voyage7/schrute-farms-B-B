@@ -65,7 +65,14 @@ main {
     border: 1px solid #000;
     background-image: url('img/lodging.jpg');
     background-size: cover;
-    
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+    transition: all 1000ms;
+}
+.info-tile1:hover {
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
 }
 .info-tile2 {
     height: 343px;
@@ -75,7 +82,14 @@ main {
     border: 1px solid #000;
     background-image: url('img/reservation.jpg');
     background-size: cover;
-    
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+    transition: all 1000ms;
+}
+.info-tile2:hover {
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
 }
 .info-tile3 {
     height: 343px;
@@ -85,6 +99,14 @@ main {
     border: 1px solid #000;
     background-image: url('img/bandb.jpg');
     background-size: cover;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+    transition: all 1000ms;
+}
+.info-tile3:hover {
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
 }
 a {
     text-decoration: none;
@@ -112,6 +134,7 @@ h3 {
     border: 1px solid #000;
     padding: 30px;
     margin-top: 70px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 aside {
     background: #f2eedf;
@@ -124,6 +147,7 @@ aside {
     padding-top: 35px;
     margin-left: 35px;
     margin-top:70px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 footer {
     grid-column: 1/4;
@@ -132,6 +156,7 @@ footer {
 }
 #carouselExampleFade {
     margin-top: -34px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .copy {
     grid-column: 1/4;
@@ -180,11 +205,17 @@ footer {
     margin-left: 50px;
     width: 284px;
     height: 212px;
-  
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .gecko-coloring {
     color: #40000d;
 }
 .coloring {
     color: #f2eedf;
+}
+.drop {
+    margin-top: 75px;
+}
+iframe {
+    margin-top: 50px;
 }
