@@ -3,69 +3,91 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Rooms | Schrute Farms Bed and Breakfast</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
 		<div class="wrapper">
-			<div class="main-wrapper">
+			<div class="bedroom">
 				<!-- Focal Image / Gallery Carousel as background of div wrapper?-->
 				<header>
-					<nav class="nav-header">
-						<ul>
-                            <li class="left-nav"><a href="#">Home</a></li>
-                            <li class="left-nav"><a href="#">About</a></li>
-							<li class="left-nav current"><a href="#">Rooms</a></li>
-							<li class="left-nav"><a href="#">Amenities</a></li>
-							<!-- can use flex to change order for mobile/tablet view? -->
-							<li class="logo-nav"><a href="#"><img src="img/schrute-logo.jpg" alt="Schrute Farms Logo" id="schrute-logo"></a></li>
-							<li class="right-nav"><a href="#">Reservations</a></li>
-							<li class="right-nav"><a href="#">Contact</a></li>
-						</ul>
-					</nav>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	<a class="navbar-brand" href="index.html">Shrute Farms Bed &amp; Breakfast</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+	 aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarNavDropdown">
+		<ul class="navbar-nav">
+			<li class="nav-item active">
+				<a class="nav-link" href="index.html">Home</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="about.html">About</a>
+			</li>
+			<li class="nav-item">
+			<a class="nav-link" href="rooms.html">Rooms<span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+				 aria-haspopup="true" aria-expanded="false">
+					More
+				</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+					<a class="dropdown-item" href="#">Reservations</a>
+					<a class="dropdown-item" href="#">Amenities</a>
+					<a class="dropdown-item" href="#">Contact Us</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+</nav>
 				</header>
 			</div>
 
 			<!-- main site content below -->
-			<main>
+			<main class="container">
+				<br>
                 <h2>Rooms</h2>
-                <p>brief description here</p>
-               <div class="roomInfo">
-                   <div class="room-tile">
-                       <img src="">
-                       <h3>Irrigation Room</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos iusto labore delectus fugit recusandae soluta cumque doloribus praesentium excepturi, illo odio alias blanditiis eaque architecto.</p>
+               <div class="roomInfo row">
+                   <div class="room-tile col-md-8">
+                       <img src="img/irrigation-room.jpg">
+					 </div>
+					 <div class="description col-md-4"> 
+					   <h3 class="text-center">Irrigation Room</h3>
                        <p>description here</p>
-                   </div>
-                   <div class="room-tile">
-                        <img src="">
-                        <h3>America Room</h3>
-                        <p>description here</p>
+					 </div>
+                   <div class="room-tile col-md-8">
+						<img src="img/america-room.jpg">
+				   </div>
+				   <div class="col-md-4 description">
+                        <h3 class="text-center">America Room</h3>
+						<p>description here</p>
+						</div>
                     </div>
-                    <div class="room-tile">
-                            <img src="">
-                            <h3>Nighttime Room</h3>
-                            <p>description here</p>
+                    <div class="room-tile col-md-8">
+							<img src="img/night-room.jpg">
+					</div>
+					<div class="col-md-4 description">
+                            <h3 class="text-center">Nighttime Room</h3>
+							<p>description here</p>
+					</div>
                         </div>
                </div>
-               <div class="call-to-action"><a href="#">Book now!</a></div>
+			<div class="call-to-action"><a href="reservations.html"> <button type="button" class="btn btn-secondary">BOOK NOW!</button></a></div>
+				<br><br>
 			</main>
 			<footer>
-				<nav class="nav-footer">
-					<!-- change up links in footer nav from header nav?? -->
-				<ul>
-					<li class="left-nav"><a href="#">Home</a></li>
-					<li class="left-nav"><a href="#">Rooms</a></li>
-					<li class="left-nav"><a href="#">Amenities</a></li>
-					<!-- can use flex to change order for mobile/tablet view? -->
-					<li class="logo-nav"><a href="#">Schrute Farms B&B</a></li>
-					<li class="right-nav"><a href="#">Reservations</a></li>
-					<li class="right-nav"><a href="#">Contact</a></li>
-				</ul>
-				</nav>
 
 				<p class="copy">Copyright &copy; 2018, Schrute Farms, LLC. All Rights Reserved.</p>
 
-				<p class="site-credit"><small>Designed by Chingu Voyage 7: <a href="https://github.com/chingu-voyage7/Geckos-Team-05">Geckos Team 5</a> with &hearts;</small></p>
+				<p class="site-credit"><small>Designed by Chingu Voyage 7: <a href="https://github.com/chingu-voyage7/Geckos-Team-05"><span class="gecko-coloring">Geckos Team 5</span></a> with &hearts;</small></p>
 			</footer>
 		</div>
+
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 	</body>
 </html>
