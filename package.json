@@ -1,0 +1,26 @@
+{
+  "name": "geckos-team-05",
+  "version": "1.0.0",
+  "description": "practice",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.16.4",
+    "hbs": "^4.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chingu-voyage7/Geckos-Team-05.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chingu-voyage7/Geckos-Team-05/issues"
+  },
+  "homepage": "https://github.com/chingu-voyage7/Geckos-Team-05#readme"
+}
