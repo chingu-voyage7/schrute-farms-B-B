@@ -219,3 +219,13 @@ footer {
 iframe {
     margin-top: 50px;
 }
+.contact {
+    height: 55vh;
+    width: 100%;
+    background-image: url('img/contact.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#contact-us {
+    margin-top: 10%;
+}
