@@ -2,13 +2,19 @@
 const express = require('express');
 const hbs = require('hbs');
 
+// import mongoose setup code
+const {mongoose} = require('./server/db/mongoose');
+//import ResRequest mongoose model
+const {ResRequest} = require('./server/models/resRequests');
+//import ContactEnquiry mongoose model
+const {ContactEnquiry} = require('./server/models/Enquiries');
+
 
 //this sets the port variable _either_ to the host machine's pre-specified port for node application (i.e. Heroku has this configured), OR to port 3000 if no port is already specified
 const port = process.env.PORT || 3000;
 
 //initializes an express server - BOOM!
 var app = express();
-
 
 
 // This tells the express app that we were using handlebars (i.e. hbs) to render the html to the server
@@ -56,3 +62,7 @@ app.listen(port, () => {
   console.log(`Server is up and running on port ${port}`);
 });
 
+
+// Set up MongoDB Routes
+
+//add bodyParser????
