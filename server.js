@@ -1,6 +1,8 @@
 // These lines integrate external modules/functionality into the nodeJS file
 const express = require('express');
 const hbs = require('hbs');
+//with body-parser, we can send json data to our application
+const bodyParser = require('body-parser');
 
 // import mongoose setup code
 const {mongoose} = require('./server/db/mongoose');
@@ -65,4 +67,25 @@ app.listen(port, () => {
 
 // Set up MongoDB Routes
 
-//add bodyParser????
+//configure body-parser middleware
+app.use(bodyParser.json());
+
+//route to POST enquiries
+app.post('/enquiries', (req, res) => {
+  console.log(req.body);
+  var enquiry = new ContactEnquiry({
+    firstName: req.body.firstName,
+    lastName: req.body.lastName,
+    email: req.body.email,
+    message: req.body.message
+  });
+
+  enquiry.save().then( (doc)=> {
+    res.status(200).send(doc);
+  }, (e) => {
+    res.status(400).send(e);
+  });
+
+});
+// understand this!!
+module.exports = {app};
