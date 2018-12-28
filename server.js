@@ -53,7 +53,7 @@ app.get('/amenities', (req,res) => {
 });
 
 app.get('/contact', (req,res) => {
-  res.render('contact.hbs');
+  res.render('contacttest.hbs');
 });
 
 app.get('/dev', (req,res) => {
@@ -69,10 +69,11 @@ app.listen(port, () => {
 
 //configure body-parser middleware
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 //route to POST enquiries
 app.post('/enquiries', (req, res) => {
-  console.log(req.body);
+  // console.log(req.body);
   var enquiry = new ContactEnquiry({
     firstName: req.body.firstName,
     lastName: req.body.lastName,
@@ -81,7 +82,7 @@ app.post('/enquiries', (req, res) => {
   });
 
   enquiry.save().then( (doc)=> {
-    res.status(200).send(doc);
+    res.status(200).send("Item saved to database");
   }, (e) => {
     res.status(400).send(e);
   });
