@@ -219,3 +219,33 @@ footer {
 iframe {
     margin-top: 50px;
 }
+.contact {
+    height: 55vh;
+    width: 100%;
+    background-image: url('img/contact.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#contact-us {
+    margin-top: 10%;
+}
+
+/* Stu added below here - Dec 27 */
+/* Adjusted formatting to allow form to be centered on page and fields to span full width of parent container */
+
+.contactForm {
+    width: 100%;
+}
+
+#contact-fields-container {
+    justify-content: center;
+    flex-direction: column;
+}
+
+.form-item {
+    margin-top: 5px;
+}
+
+.btn {
+    margin-top: 15px;
+}
