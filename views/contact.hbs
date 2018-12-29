@@ -60,7 +60,7 @@
 
       <div class="form-row" id="contact-fields-container">
         <div id="name-container" class="form-item">
-        <label for="name">Name:</label>
+        <label for="name">Name:*</label>
         <input type="text" class="InputBox form-control" type="name" name="name" id="name" placeholder="Your name here" required>
         </div>
         <br>
@@ -70,13 +70,14 @@
         </div>
 <br>
         <div id="phone-container" class="form-item">
-          <label for="phone">Phone number:</label>
+          <label for="phone">Phone number:*</label>
           <input class="inputBox form-control" type="tel" name="phone" id="phone" placeholder="555-555-8337" required>
         </div>
       <br>
         <div id="comments-container" class="form-item">
-          <label for="comments">Comments/Questions:</label>
+          <label for="comments">Comments/Questions:*</label>
           <textarea class="inputBox form-control" cols="25" rows="10" name="message" placeholder="Enter your comments (e.g. What type of beets do you grow? Should I be concerned about bears?)"></textarea>
+          <p>* Required</p>
         </div>
 <br><br>
         <div id="submit-container" class="form-item">
