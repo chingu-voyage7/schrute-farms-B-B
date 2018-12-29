@@ -55,30 +55,32 @@
   <main class="container">
     <h2 id="contact-us">Contact Us</h2>
 <div class="container row">
-<form action="#" method="GET" class="contactForm">
+
+<form action="/enquiries" method="POST" class="contactForm">
+
       <div class="form-row" id="contact-fields-container">
         <div id="name-container" class="form-item">
         <label for="name">Name:</label>
-        <input type="text" class="InputBox form-control" type="name" name="name" id="name" placeholder="First name" value="John Smith" required>
+        <input type="text" class="InputBox form-control" type="name" name="name" id="name" placeholder="Your name here" required>
         </div>
         <br>
         <div id="email-container" class="form-item">
           <label for="email">Email:</label>
-          <input class="inputBox form-control" type="email" name="email" id="email">
+          <input class="inputBox form-control" type="email" name="email" id="email" placeholder="beets@rootveggies.com">
         </div>
 <br>
         <div id="phone-container" class="form-item">
           <label for="phone">Phone number:</label>
-          <input class="inputBox form-control" type="tel" name="phone" id="phone" required>
+          <input class="inputBox form-control" type="tel" name="phone" id="phone" placeholder="555-555-8337" required>
         </div>
       <br>
         <div id="comments-container" class="form-item">
           <label for="comments">Comments/Questions:</label>
-          <textarea class="inputBox form-control" cols="25" rows="10">Enter your comments (e.g. What type of beets do you grow? Should I be concerned about bears?)</textarea>
+          <textarea class="inputBox form-control" cols="25" rows="10" name="message" placeholder="Enter your comments (e.g. What type of beets do you grow? Should I be concerned about bears?)"></textarea>
         </div>
 <br><br>
         <div id="submit-container" class="form-item">
-          <button type="button" class="btn btn-secondary">SUBMIT</button>
+          <button type="submit" class="btn btn-secondary">SUBMIT</button>
         </div>
         </div>
       </div>
