@@ -88,5 +88,37 @@ app.post('/enquiries', (req, res) => {
   });
 
 });
+
+//route to POST to request
+
+app.post('/requests', (req, res) => {
+  console.log(req.body);
+  
+  var reservation = new ResRequest({
+    firstName: req.body.firstName,
+    lastName: req.body.lastName,
+    email: req.body.email,
+    city: req.body.city,
+    state: req.body.state,
+    zip: req.body.zip,
+    agree: req.body.agree,
+    arrivalDate: req.body.arrivalDate,
+    departureDate: req.body.departureDate,
+    numAdults: req.body.numAdults,
+    numChildren: req.body.numChildren,
+    numRooms: req.body.numRooms,
+    room: req.body.room,
+    flexibility: req.body.flexibility,
+    message: req.body.message
+  });
+
+  reservation.save().then( (doc)=> {
+    res.status(200).send("Item saved to database");
+  }, (e) => {
+    res.status(400).send(e);
+  });
+
+});
+
 // understand this!!
 module.exports = {app};
