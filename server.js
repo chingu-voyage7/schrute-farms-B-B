@@ -9,7 +9,7 @@ const {mongoose} = require('./server/db/mongoose');
 //import ResRequest mongoose model
 const {ResRequest} = require('./server/models/resRequests');
 //import ContactEnquiry mongoose model
-const {ContactEnquiry} = require('./server/models/Enquiries');
+const {ContactEnquiry} = require('./server/models/enquiries');
 
 
 //this sets the port variable _either_ to the host machine's pre-specified port for node application (i.e. Heroku has this configured), OR to port 3000 if no port is already specified
@@ -53,7 +53,7 @@ app.get('/amenities', (req,res) => {
 });
 
 app.get('/contact', (req,res) => {
-  res.render('contacttest.hbs');
+  res.render('contact.hbs');
 });
 
 app.listen(port, () => {
@@ -71,9 +71,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.post('/enquiries', (req, res) => {
   // console.log(req.body);
   var enquiry = new ContactEnquiry({
-    firstName: req.body.firstName,
-    lastName: req.body.lastName,
+    name: req.body.name,
     email: req.body.email,
+    phone: req.body.phone,
     message: req.body.message
   });
 
