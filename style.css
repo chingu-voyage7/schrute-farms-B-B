@@ -203,6 +203,7 @@ footer {
 .room-tile img {
     margin-top: 15px;
     margin-left: 50px;
+    float: left;
     width: 284px;
     height: 212px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -229,7 +230,13 @@ iframe {
 #contact-us {
     margin-top: 10%;
 }
+.night {
+    margin-left: -14px;
+}
 
+.height {
+    margin-top: -155px;
+}
 /* Stu added below here - Dec 27 */
 /* Adjusted formatting to allow form to be centered on page and fields to span full width of parent container */
 
