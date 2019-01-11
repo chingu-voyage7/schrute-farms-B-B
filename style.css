@@ -194,11 +194,18 @@ footer {
     background-repeat: no-repeat;
 }
 .bedroom {
-     height: 350px;
-     width: 100%;
-     background-image: url('img/bedroom.jpg');
-     background-size: 100%;
-     background-repeat: no-repeat;
+    height: 350px;
+    width: 100%;
+    background-image: url('img/bedroom.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.developer {
+    height: 350px;
+    width: 100%;
+    background-image: url('img/developer.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 .room-tile img {
     margin-top: 15px;
@@ -255,4 +262,34 @@ iframe {
 
 .btn {
     margin-top: 15px;
+}
+
+/*Easter Egg CSS*/
+#egg-container {
+    display: flex;
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+}
+
+#bbb-container {
+    height: 100px;
+    width: 100px;
+}
+
+#bbb-container:hover {
+    cursor: pointer;
+}
+
+.bears {
+    background: center / contain no-repeat url(https://image.flaticon.com/icons/svg/185/185685.svg);
+
+}
+
+.beets {
+    background: center / contain no-repeat url(https://image.flaticon.com/icons/svg/1201/1201993.svg);
+}
+
+.bsg {
+    background: center / contain no-repeat url(https://img.icons8.com/metro/208/000000/cylon-head-new.png);
 }
