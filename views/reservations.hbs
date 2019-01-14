@@ -15,7 +15,6 @@
 <body>
   <div class="container-fluid">
     <div class="main-wrapper">
-      <!-- Focal Image / Gallery Carousel as background of div wrapper?-->
       <header>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="/">Shrute Farms Bed &amp; Breakfast</a>
@@ -43,6 +42,8 @@
           <a class="dropdown-item" href="/reservations">Reservations</a>
           <a class="dropdown-item" href="/amenities">Amenities</a>
           <a class="dropdown-item" href="/contact">Contact Us</a>
+          <a class="dropdown-item" href="/dev">The Developers</a>
+        
         </div>
       </li>
     </ul>
@@ -118,17 +119,6 @@
       </div>
     </div>
   </div>
-  <div class="form-group">
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-      <label class="form-check-label" for="invalidCheck">
-        Agree to terms and conditions
-      </label>
-      <div class="invalid-feedback">
-        You must agree before submitting.
-      </div>
-    </div>
-  </div>
   <div id="arrive-container">
     <label for="arrival-date">Arrival date:</label>
     <input class="inputBox form-control col-md-4 mb-3" type="date" name="arrival-date" id="arrival-date" required>
@@ -191,7 +181,26 @@
           <textarea class="inputBox form-control col-md-8 md-3 mx-auto" cols="25" rows="10">Enter your comments (e.g. What type of beets do you grow? Should I be concerned about bears?)</textarea>
         </div>
         <br>
-
+        <br>
+        <div class="form-group">
+          <div class="form-check">
+            <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top"
+              data-content="Schrute Farms doesn't provide refunds for any cancelations done less than 24 hours in advance. If we are unable to accomdate your request you will receive an email advising as such. All inquiries are acknowledged and repsonded to within 24 Business Hours. Also by confirming your reservation at Schrute Farms you agree to accept all meats as they are prepared regardless of origin (most likely goat).">
+              Terms and Conditions
+            </button>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+            <label class="form-check-label" for="invalidCheck">
+              Agree to terms and conditions
+            </label>
+            <div class="invalid-feedback">
+              You must agree before submitting.
+            </div>
+          </div>
+        </div>
         <div id="submit-container">
           <button type="button" class="btn btn-secondary">Submit</button>
           <br>
@@ -223,5 +232,6 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="/easter.js"></script>
   </body>
 </html>

@@ -48,6 +48,11 @@ app.get('/contact', (req,res) => {
   res.render('contact.hbs');
 });
 
+app.get('/dev', (req,res) => {
+  res.render('dev.hbs');
+});
+
 app.listen(port, () => {
   console.log(`Server is up and running on port ${port}`);
 });
+
