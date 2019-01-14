@@ -89,6 +89,20 @@ app.post('/enquiries', (req, res) => {
 
 });
 
+// List all reservation requests
+app.get('/enquiries', (req, res) => {
+  ContactEnquiry.find().then( (enquiries) => {
+    
+    res.send({enquiries});  //sent as an object b/c you can add custom properties on later (vs. sending as an object)\
+
+  }, (e) => {
+    res.status(400).send(e);
+  });
+
+});
+
+
+
 //route to POST to request
 
 app.post('/requests', (req, res) => {
@@ -123,7 +137,7 @@ app.post('/requests', (req, res) => {
 // List all reservation requests
 app.get('/requests', (req, res) => {
   ResRequest.find().then( (requests) => {
-    
+
     res.send({requests});  //sent as an object b/c you can add custom properties on later (vs. sending as an object)\
 
   }, (e) => {
