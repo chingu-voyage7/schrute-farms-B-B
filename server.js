@@ -120,5 +120,17 @@ app.post('/requests', (req, res) => {
 
 });
 
+// List all reservation requests
+app.get('/requests', (req, res) => {
+  ResRequest.find().then( (requests) => {
+    
+    res.send({requests});  //sent as an object b/c you can add custom properties on later (vs. sending as an object)\
+
+  }, (e) => {
+    res.status(400).send(e);
+  });
+
+});
+
 // understand this!!
 module.exports = {app};
