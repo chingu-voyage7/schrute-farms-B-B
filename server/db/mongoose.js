@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 //"promises are easier to chain and scale"
 mongoose.Promise = global.Promise;
 
-// below checjs if process.env.MONGODB_URI exisits (i.e. is the app running on Heroku) if not, defaults to the localhost URL
+// below checks if process.env.MONGODB_URI exisits (i.e. is the app running on Heroku) if not, defaults to the localhost URL
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/SchruteFarms', {useMongoClient: true}).then( () => {
   console.log('Mongoose is connected to the MongoDB server');
 }, (e) => {
