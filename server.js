@@ -9,7 +9,7 @@ const {mongoose} = require('./server/db/mongoose');
 //import ResRequest mongoose model
 const {ResRequest} = require('./server/models/resRequests');
 //import ContactEnquiry mongoose model
-const {ContactEnquiry} = require('./server/models/enquiries');
+const {ContactEnquiry} = require('./server/models/Enquiries');
 
 
 //initializes an express server - BOOM!
