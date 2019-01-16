@@ -1,40 +1,28 @@
 
-// function determines if arrival date is at least one day earlier than departure date
-// if dates are valid returns 'true', if dates are invalid returns false
-
 // date format: YYYY-MM-DD
 
 
+// Functions to assign year / month / day to consts & convert strings to integers
 const getYear = (dateString) => parseInt(dateString.slice(0,4));
 const getMonth = (dateString) => parseInt(dateString.slice(5,7));
 const getDay = (dateString) => parseInt(dateString.slice(8,10));
 
+// One of these values is returned when the checkDates() function is called
+const dateApproved = true;
+const dateRejected = false;
 
-const dateError = () => {
-  console.log('Error. Please enter an arrival date that is earlier than your departure date.');
-};
 
-const approveDate = () => {
-  console.log('Looks good!');
-};
+// checkDates() function determines if the provided arrival date is at least one day earlier than the provided departure date that the user has entered
+// if dates are valid returns 'true', if dates are invalid returns false
 
 function checkDates(arrivalDate,departureDate) {
 
-
+  // assigning the dates to objects allows us to easily access the year / month / day for arrival and departure dates
   const arrival = {
     year: getYear(arrivalDate),
     month: getMonth(arrivalDate),
     day: getDay(arrivalDate)
   };
-
-  // const arrivalYear = getYear(arrivalDate);
-  console.log(`Arrival year: ${arrival.year} and it's a ${typeof arrival.year}`);
-
-  // const arrivalMonth = getMonth(arrivalDate);
-  console.log(`Arrival month: ${arrival.month} and it's a ${typeof arrival.month}`);
-
-  // const arrivalDay = getDay(arrivalDate);
-  console.log(`Arrival day: ${arrival.day} and it's a ${typeof arrival.day}`);
 
   const departure = {
     year: getYear(departureDate),
@@ -45,17 +33,18 @@ function checkDates(arrivalDate,departureDate) {
   if (arrival.year == departure.year) {
 
     if ( ((arrival.month == departure.month) && (arrival.day < departure.day)) || arrival.month < departure.month ) {
-        approveDate();
+      
+        return dateApproved;
+
       } else {
-        console.log('One');
-        dateError();
+        return dateRejected;
       }
 
   } else if (arrival.year < departure.year) {
-    approveDate();
+    return dateApproved;
 
   } else {
-    dateError();
+    return dateRejected;
   }
 
 }
