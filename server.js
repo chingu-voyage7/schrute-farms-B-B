@@ -129,8 +129,12 @@ app.post('/requests', (req, res) => {
     message: req.body.message
   });
 
-  //DATE CHECK:
-  dateCheck.checkDates(reservation.arrivalDate,reservation.departureDate);
+  // The dateStatus variable holds a boolean.  'true' if valid dates are provided and 'false' if the dates are not valid
+  var dateStatus = dateCheck.checkDates(reservation.arrivalDate,reservation.departureDate);
+
+  if (dateStatus === false) {
+    return res.status(400).send('date error');  //change to provide error message to user re: dates and ask to re-enter
+  }
 
   reservation.save().then( (doc)=> {
     res.status(200).send("Item saved to database");
