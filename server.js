@@ -11,6 +11,9 @@ const {ResRequest} = require('./server/models/resRequests');
 //import ContactEnquiry mongoose model
 const {ContactEnquiry} = require('./server/models/Enquiries');
 
+// Require checkdates
+const dateCheck = require('./dateCheck');
+
 
 //initializes an express server - BOOM!
 var app = express();
@@ -106,7 +109,7 @@ app.get('/enquiries', (req, res) => {
 //route to POST to request
 
 app.post('/requests', (req, res) => {
-  console.log(req.body);
+  // console.log(req.body);
   
   var reservation = new ResRequest({
     firstName: req.body.firstName,
@@ -125,6 +128,9 @@ app.post('/requests', (req, res) => {
     flexibility: req.body.flexibility,
     message: req.body.message
   });
+
+  //DATE CHECK:
+  dateCheck.checkDates(reservation.arrivalDate,reservation.departureDate);
 
   reservation.save().then( (doc)=> {
     res.status(200).send("Item saved to database");
