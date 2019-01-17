@@ -11,7 +11,7 @@ const {ResRequest} = require('./server/models/resRequests');
 //import ContactEnquiry mongoose model
 const {ContactEnquiry} = require('./server/models/Enquiries');
 
-// Require checkdates
+// Require dateCheck
 const dateCheck = require('./dateCheck');
 
 
@@ -104,8 +104,6 @@ app.get('/enquiries', (req, res) => {
 
 });
 
-
-
 //route to POST to request
 
 app.post('/requests', (req, res) => {
@@ -129,7 +127,7 @@ app.post('/requests', (req, res) => {
     message: req.body.message
   });
 
-  // The dateStatus variable holds a boolean.  'true' if valid dates are provided and 'false' if the dates are not valid
+  // The dateStatus variable holds a boolean.  'true' if dates are valid and 'false' if the dates are invalid
   var dateStatus = dateCheck.checkDates(reservation.arrivalDate,reservation.departureDate);
 
   if (dateStatus === false) {

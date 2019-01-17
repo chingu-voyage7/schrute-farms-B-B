@@ -1,6 +1,5 @@
 
-
-// ----- Browser-sidee validation for arrival and departure dates ---//
+// ----- Browser-side validation for arrival and departure dates ---//
 
 //Select DOM elements for use in function below
 const elArrivalDate = document.getElementById('arrival-date');
