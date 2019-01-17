@@ -49,4 +49,54 @@ function checkDates(arrivalDate,departureDate) {
 
 }
 
+// // Check blackout dates - incomplete for now
+
+// const blackedOut = [
+//   {
+//     // room: 'irrigation',
+//     blackOutStart: '2019-02-01',
+//     blackOutEnd: '2019-02-05'
+//   },
+//   {
+//     // room: 'irrigation',
+//     blackOutStart: '2019-03-01',
+//     blackOutEnd: '2019-03-05'
+//   }
+// ];
+  
+// function checkBlackOutDates() {
+
+//   blackedOut.forEach( (dates) => {
+//     // set blackout start date (int's) to an object
+//     let start = {
+//       year: getYear(dates.blackOutStart),
+//       month: getMonth(dates.blackOutStart),
+//       day: getDay(dates.blackOutStart)
+//     };
+
+//     // set blackout end date (int's) to an object
+//     let end = {
+//         year: getYear(dates.blackOutEnd),
+//         month: getMonth(dates.blackOutEnd),
+//         day: getDay(dates.blackOutEnd)
+//     };
+    
+//     //if arrival date OR the departure date lies between the blackout start and end dates, throw and error
+
+//     //e.g. 2019/2019 or 2019/2020
+//     //is the arrival between the dates?
+//     if ( (arrival.year >= start.year && arrival.year <= end.year ) ) { //year check
+
+
+      
+//     } else {
+//       //dates blacked not out
+//     }
+
+    
+//   });
+
+
+// }
+
 module.exports = {checkDates};
