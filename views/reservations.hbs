@@ -16,7 +16,6 @@
 <body>
   <div class="container-fluid">
     <div class="main-wrapper">
-      <!-- Focal Image / Gallery Carousel as background of div wrapper?-->
       <header>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="/">Shrute Farms Bed &amp; Breakfast</a>
@@ -67,19 +66,19 @@
       <div class="container">
       <h2>Submit a Reservation Request</h2>
 
-      
-<form class="needs-validation" novalidate action="#" method="GET">
+      {{!-- Stu removed the 'novalidate' keyword --}}
+<form class="needs-validation"  action="/requests" method="POST" id='resForm'>
   <div class="form-row">
     <div class="col-md-4 mb-3">
       <label for="validationCustom01">First name</label>
-      <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="John" required>
+      <input type="text" class="form-control" id="validationCustom01" name="firstName" placeholder="John" required>
       <div class="valid-feedback">
         Looks good!
       </div>
     </div>
     <div class="col-md-4 mb-3">
       <label for="validationCustom02">Last name</label>
-      <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="Smith" required>
+      <input type="text" class="form-control" id="validationCustom02" name="lastName" placeholder="Smith" required>
       <div class="valid-feedback">
         Looks good!
       </div>
@@ -90,7 +89,7 @@
         <div class="input-group-prepend">
         
         </div>
-        <input type="text" class="form-control" id="validationCustomUsername" placeholder="name@example.com" aria-describedby="inputGroupPrepend"
+        <input type="email" class="form-control" id="validationCustomUsername" name="email" placeholder="name@example.com" aria-describedby="inputGroupPrepend"
           required>
         <div class="invalid-feedback">
           Please provide a valid email address.
@@ -101,59 +100,63 @@
   <div class="form-row">
     <div class="col-md-6 mb-3">
       <label for="validationCustom03">City</label>
-      <input type="text" class="form-control" id="validationCustom03" placeholder="City" required>
+      <input type="text" class="form-control" id="validationCustom03" name="city" placeholder="City" required>
       <div class="invalid-feedback">
         Please provide a valid city.
       </div>
     </div>
     <div class="col-md-3 mb-3">
       <label for="validationCustom04">State</label>
-      <input type="text" class="form-control" id="validationCustom04" placeholder="State" required>
+      <input type="text" class="form-control" id="validationCustom04" name="state" placeholder="State" required>
       <div class="invalid-feedback">
         Please provide a valid state.
       </div>
     </div>
     <div class="col-md-3 mb-3">
       <label for="validationCustom05">Zip</label>
-      <input type="text" class="form-control" id="validationCustom05" placeholder="Zip" required>
+      <input type="text" class="form-control" id="validationCustom05" name="zip" placeholder="Zip" required>
       <div class="invalid-feedback">
         Please provide a valid zip.
       </div>
     </div>
   </div>
   <div id="arrive-container">
-    <label for="arrival-date">Arrival date:</label>
-    <input class="inputBox form-control col-md-4 mb-3" type="date" name="arrival-date" id="arrival-date" required>
+    <label for="arrivalDate">Arrival date:</label>
+    <input class="inputBox form-control col-md-4 mb-3" type="date" id="arrival-date" name="arrivalDate" required>
   </div>
   
   <div id="depart-container">
-    <label for="depart-date">Departure date:</label>
-    <input class="inputBox form-control col-md-4 mb-3" type="date" name="depart-date" id="depart-date" required>
+    <label for="departDate">Departure date:</label>
+    <span id="errorBox"><input class="inputBox form-control col-md-4 mb-3" type="date" id="depart-date" name="departureDate" required>
+    <div id="dateError" class='hideError'>Please enter valid dates</div></span>
   </div>
+
+ 
+
   <br>
         <div id="guests">
           
           <label for="adults">Number of Adults (16+ years):</label>
-          <select class="form-control col-md-2 mb-1" name="guests">
+          <select class="form-control col-md-2 mb-1" id="adults" name="numAdults">
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
-            <option value=4">4 or more</option>
+            <option value="4">4 or more</option>
           </select>
 <br>
           <label for="children">Number of Children (0-15yrs):</label>
-          <select class="form-control col-md-2 mb-1" name="guests">
+          <select class="form-control col-md-2 mb-1" id="children" name="numChildren">
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
-            <option value=4">4 or more</option>
+            <option value="4">4 or more</option>
           </select>
 
         </div>
 <br>
         <div id="number-of-rooms">
           <label for="num-rooms">How many rooms are requested?</label>
-          <select class="form-control col-md-2 mb-1"  name="num-rooms">
+          <select class="form-control col-md-2 mb-1"  id="num-rooms" name="numRooms">
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -180,13 +183,21 @@
 <br>
         <div id="comments-container">
           <label for="comments" class="text-center">Comments/Questions:</label> <br>
-          <textarea class="inputBox form-control col-md-8 md-3 mx-auto" cols="25" rows="10">Enter your comments (e.g. What type of beets do you grow? Should I be concerned about bears?)</textarea>
+          <textarea class="inputBox form-control col-md-8 md-3 mx-auto" cols="25" rows="10" name="message" id="comments" placeholder="(e.g. What type of beets do you grow? Should I be concerned about bears?)"></textarea>
         </div>
         <br>
         <br>
         <div class="form-group">
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+            <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top"
+              data-content="Schrute Farms doesn't provide refunds for any cancelations done less than 24 hours in advance. If we are unable to accomdate your request you will receive an email advising as such. All inquiries are acknowledged and repsonded to within 24 Business Hours. Also by confirming your reservation at Schrute Farms you agree to accept all meats as they are prepared regardless of origin (most likely goat).">
+              Terms and Conditions
+            </button>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="agree" id="invalidCheck" name="agree" required>
             <label class="form-check-label" for="invalidCheck">
               Agree to terms and conditions
             </label>
@@ -196,7 +207,7 @@
           </div>
         </div>
         <div id="submit-container">
-          <button type="button" class="btn btn-secondary">Submit</button>
+          <button type="submit" class="btn btn-secondary">Submit</button>
           <br>
         </div>
 
@@ -226,5 +237,7 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="/easter.js"></script>
+  <script src="main.js"></script>
   </body>
 </html>

@@ -11,3 +11,12 @@ easterEgg.addEventListener('click', () => {
         easterEgg.className = 'bears';
     }
 });
+// confirmation that the form was submitted
+$("form").submit(function () {
+    alert("Submitted");
+});
+
+// code for popover terms and conditions
+$('.popover-dismiss').popover({
+    trigger: 'focus'
+})
