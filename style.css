@@ -292,3 +292,25 @@ iframe {
 .bsg {
     background: center / contain no-repeat url(https://img.icons8.com/metro/208/000000/cylon-head-new.png);
 }
+
+#errorBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.displayError {
+    display: inline-block;
+}
+
+.hideError {
+    display: none;
+}
+
+#dateError {
+    color: red;
+    font-weight: 700;
+    padding: 0 0 16px 10px;
+}
+

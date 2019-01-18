@@ -11,6 +11,9 @@ const {ResRequest} = require('./server/models/resRequests');
 //import ContactEnquiry mongoose model
 const {ContactEnquiry} = require('./server/models/Enquiries');
 
+// Require dateCheck
+const dateCheck = require('./dateCheck');
+
 
 //initializes an express server - BOOM!
 var app = express();
@@ -101,12 +104,10 @@ app.get('/enquiries', (req, res) => {
 
 });
 
-
-
 //route to POST to request
 
 app.post('/requests', (req, res) => {
-  console.log(req.body);
+  // console.log(req.body);
   
   var reservation = new ResRequest({
     firstName: req.body.firstName,
@@ -125,6 +126,13 @@ app.post('/requests', (req, res) => {
     flexibility: req.body.flexibility,
     message: req.body.message
   });
+
+  // The dateStatus variable holds a boolean.  'true' if dates are valid and 'false' if the dates are invalid
+  var dateStatus = dateCheck.checkDates(reservation.arrivalDate,reservation.departureDate);
+
+  if (dateStatus === false) {
+    return res.status(400).send('date error');  //change to provide error message to user re: dates and ask to re-enter
+  }
 
   reservation.save().then( (doc)=> {
     res.status(200).send("Item saved to database");
