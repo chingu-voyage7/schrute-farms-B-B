@@ -63,6 +63,10 @@ app.get('/dev', (req,res) => {
   res.render('dev.hbs');
 });
 
+app.get('*', (req, res) => {
+  res.render('404.hbs');
+});
+
 app.listen(port, () => {
   console.log(`Server is up and running on port ${port}`);
 });
