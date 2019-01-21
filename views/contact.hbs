@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Contact Us | Schrute Farms B&amp;B</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--CSS Bootstrap-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon"/>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="main-wrapper">
+      <!-- Focal Image / Gallery Carousel as background of div wrapper?-->
+      <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <a class="navbar-brand" href="/">Shrute Farms Bed &amp; Breakfast</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/rooms">Rooms</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  More
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="/reservations">Reservations</a>
+                  <a class="dropdown-item" href="/amenities">Amenities</a>
+                  <a class="dropdown-item" href="/contact">Contact Us</a>
+                  <a class="dropdown-item" href="/dev">The Developers</a>
+                
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+    </div> <!-- End of .main-wrapper -->
+  <main class="container">
+    <h2 id="contact-us">Contact Us</h2>
+<div class="container row">
+
+<form action="/enquiries" method="POST" class="contactForm">
+
+      <div class="form-row" id="contact-fields-container">
+        <div id="name-container" class="form-item">
+        <label for="name">Name:*</label>
+        <input type="text" class="InputBox form-control" type="name" name="name" id="name" placeholder="Your name here" required>
+        </div>
+        <br>
+        <div id="email-container" class="form-item">
+          <label for="email">Email:</label>
+          <input class="inputBox form-control" type="email" name="email" id="email" placeholder="beets@rootveggies.com">
+        </div>
+<br>
+        <div id="phone-container" class="form-item">
+          <label for="phone">Phone number:*</label>
+          <input class="inputBox form-control" type="tel" name="phone" id="phone" placeholder="555-555-8337" required>
+        </div>
+      <br>
+        <div id="comments-container" class="form-item">
+          <label for="comments">Comments/Questions:*</label>
+          <textarea class="inputBox form-control" cols="25" rows="10" name="message" placeholder="Enter your comments (e.g. What type of beets do you grow? Should I be concerned about bears?)"></textarea>
+          <p>* Required</p>
+        </div>
+<br><br>
+        <div id="submit-container" class="form-item">
+          <button type="submit" class="btn btn-secondary">SUBMIT</button>
+        </div>
+        </div>
+      </div>
+    </form>
+    </main>
+
+    <footer class="clearfix">
+    
+      <p class="copy">Copyright &copy; 2018, Schrute Farms, LLC. All Rights Reserved.</p>
+    
+      <p class="site-credit"><small>Designed by Chingu Voyage 7: <a href="https://github.com/chingu-voyage7/Geckos-Team-05"><span
+              class="gecko-coloring">Geckos Team 5</span></a> with &hearts;</small></p>
+    
+    </footer>
+</div> <!-- End of .wrapper -->
+</body>
+
+<!-- Bootstrap JavaScript-->
+<!-- jQuery then popper.js then bootstrap.js-->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</html>

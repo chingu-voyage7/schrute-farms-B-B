@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Reservations | Schrute Farms B&amp;B</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--CSS Bootstrap-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon"/>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="main-wrapper">
+      <header>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="/">Shrute Farms Bed &amp; Breakfast</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/about">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/rooms">Rooms</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          More
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="/reservations">Reservations</a>
+          <a class="dropdown-item" href="/amenities">Amenities</a>
+          <a class="dropdown-item" href="/contact">Contact Us</a>
+          <a class="dropdown-item" href="/dev">The Developers</a>
+        
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+      </header>
+    </div> <!-- End of .main-wrapper -->
+    
+    <!-- main page content below -->
+    <main class="container drop">
+      <div class="row">
+      <h2 class="col-md-4">Availability</h2>
+
+        <!-- Is there a way to make the calendar responsive? -->
+
+        <iframe class="col-md-12" src="https://calendar.google.com/calendar/embed?title=Schrute%20Farms%20B%26B%20Availability&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=iodko3fmms67ovbvbbljc8mrng%40group.calendar.google.com&amp;color=%2328754E&amp;ctz=America%2FDetroit" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+      </div>
+      <br>
+      <div class="container">
+      <h2>Submit a Reservation Request</h2>
+
+      {{!-- Stu removed the 'novalidate' keyword --}}
+<form class="needs-validation"  action="/requests" method="POST" id='resForm'>
+  <div class="form-row">
+    <div class="col-md-4 mb-3">
+      <label for="validationCustom01">First name</label>
+      <input type="text" class="form-control" id="validationCustom01" name="firstName" placeholder="John" required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <label for="validationCustom02">Last name</label>
+      <input type="text" class="form-control" id="validationCustom02" name="lastName" placeholder="Smith" required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <label for="validationCustomEmail">Email Address</label>
+      <div class="input-group">
+        <div class="input-group-prepend">
+        
+        </div>
+        <input type="email" class="form-control" id="validationCustomUsername" name="email" placeholder="name@example.com" aria-describedby="inputGroupPrepend"
+          required>
+        <div class="invalid-feedback">
+          Please provide a valid email address.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-md-6 mb-3">
+      <label for="validationCustom03">City</label>
+      <input type="text" class="form-control" id="validationCustom03" name="city" placeholder="City" required>
+      <div class="invalid-feedback">
+        Please provide a valid city.
+      </div>
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="validationCustom04">State</label>
+      <input type="text" class="form-control" id="validationCustom04" name="state" placeholder="State" required>
+      <div class="invalid-feedback">
+        Please provide a valid state.
+      </div>
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="validationCustom05">Zip</label>
+      <input type="text" class="form-control" id="validationCustom05" name="zip" placeholder="Zip" required>
+      <div class="invalid-feedback">
+        Please provide a valid zip.
+      </div>
+    </div>
+  </div>
+  <div id="arrive-container">
+    <label for="arrivalDate">Arrival date:</label>
+    <input class="inputBox form-control col-md-4 mb-3" type="date" id="arrival-date" name="arrivalDate" required>
+  </div>
+  
+  <div id="depart-container">
+    <label for="departDate">Departure date:</label>
+    <span id="errorBox"><input class="inputBox form-control col-md-4 mb-3" type="date" id="depart-date" name="departureDate" required>
+    <div id="dateError" class='hideError'>Please enter valid dates</div></span>
+  </div>
+
+ 
+
+  <br>
+        <div id="guests">
+          
+          <label for="adults">Number of Adults (16+ years):</label>
+          <select class="form-control col-md-2 mb-1" id="adults" name="numAdults">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4 or more</option>
+          </select>
+<br>
+          <label for="children">Number of Children (0-15yrs):</label>
+          <select class="form-control col-md-2 mb-1" id="children" name="numChildren">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4 or more</option>
+          </select>
+
+        </div>
+<br>
+        <div id="number-of-rooms">
+          <label for="num-rooms">How many rooms are requested?</label>
+          <select class="form-control col-md-2 mb-1"  id="num-rooms" name="numRooms">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+          </select>
+        </div>
+<br>
+        <div id="preferred-rooms">
+          <label for="pref-rooms">Which room(s) do you prefer? (select all that apply)</label>
+          <br>
+          <input class="mr-3 ml-5" type="checkbox" name="room" value="America">America Room
+          <input class="mr-3 ml-5" type="checkbox" name="room" value="Irrigation">Irrigation Room
+          <input class="mr-3 ml-5" type="checkbox" name="room" value="Nighttime">Nighttime Room
+
+        </div>
+        <br>
+
+        <div id="flex-dates-container">
+          <label for="flexibility">Are your dates flexible?</label>
+          <br>
+          <input class="mr-3 ml-5" type="radio" name="flexibility" value="yes">Yes
+          <input class="mr-3 ml-5" type="radio" name="flexibility" value="no">No
+          <input class="mr-3 ml-5" type="radio" name="flexibility" value="maybe">Maybe
+        </div>
+<br>
+        <div id="comments-container">
+          <label for="comments" class="text-center">Comments/Questions:</label> <br>
+          <textarea class="inputBox form-control col-md-8 md-3 mx-auto" cols="25" rows="10" name="message" id="comments" placeholder="(e.g. What type of beets do you grow? Should I be concerned about bears?)"></textarea>
+        </div>
+        <br>
+        <br>
+        <div class="form-group">
+          <div class="form-check">
+            <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top"
+              data-content="Schrute Farms doesn't provide refunds for any cancelations done less than 24 hours in advance. If we are unable to accomdate your request you will receive an email advising as such. All inquiries are acknowledged and repsonded to within 24 Business Hours. Also by confirming your reservation at Schrute Farms you agree to accept all meats as they are prepared regardless of origin (most likely goat).">
+              Terms and Conditions
+            </button>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="agree" id="invalidCheck" name="agree" required>
+            <label class="form-check-label" for="invalidCheck">
+              Agree to terms and conditions
+            </label>
+            <div class="invalid-feedback">
+              You must agree before submitting.
+            </div>
+          </div>
+        </div>
+        <div id="submit-container">
+          <button type="submit" class="btn btn-secondary">Submit</button>
+          <br>
+        </div>
+
+
+      </form>
+      </div>
+      <br>
+            <p class="text-center disclaimer">We do our best to accomodate each booking request. We will respond within 24 hours to
+              confirm your request.<br>
+              Thank you for your interest in staying with Schrute Farms B&B.</p>
+    </main>
+    <footer>
+
+
+
+				<nav class="nav-footer">
+					<!-- change up links in footer nav from header nav?? -->
+	
+
+				<p class="copy">Copyright &copy; 2018, Schrute Farms, LLC. All Rights Reserved.</p>
+
+				<p class="site-credit"><small>Designed by Chingu Voyage 7: <a href="https://github.com/chingu-voyage7/Geckos-Team-05"><span class="gecko-coloring">Geckos Team 5</span></a> with &hearts;</small></p>
+
+
+  </div> <!-- End of .wrapper -->
+  <!--Bootstrap Javascript-->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="/easter.js"></script>
+  <script src="main.js"></script>
+  </body>
+</html>
