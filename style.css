@@ -189,21 +189,21 @@ footer {
 .red-barn {
     height: 55vh;
     width: 100%;
-    background-image: url('img/red-barn.jpg');
+    background-image: url('img/red-barn3.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }
 .bedroom {
     height: 350px;
     width: 100%;
-    background-image: url('img/bedroom.jpg');
+    background-image: url('img/bedroom3.jpg');
     background-size: 100%;
     background-repeat: no-repeat;
 }
 .developer {
     height: 350px;
     width: 100%;
-    background-image: url('img/developer.jpg');
+    background-image: url('img/developer3.jpg');
     background-size: 100%;
     background-repeat: no-repeat;
 }
@@ -230,7 +230,7 @@ iframe {
 .contact {
     height: 55vh;
     width: 100%;
-    background-image: url('img/contact.jpg');
+    background-image: url('img/contact3.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }
