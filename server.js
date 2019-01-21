@@ -63,13 +63,7 @@ app.get('/dev', (req,res) => {
   res.render('dev.hbs');
 });
 
-app.get('*', (req, res) => {
-  res.render('404.hbs');
-});
 
-app.listen(port, () => {
-  console.log(`Server is up and running on port ${port}`);
-});
 
 
 // Set up MongoDB Routes
@@ -156,6 +150,14 @@ app.get('/requests', (req, res) => {
     res.status(400).send(e);
   });
 
+});
+
+app.get('*', (req, res) => {
+  res.render('404.hbs');
+});
+
+app.listen(port, () => {
+  console.log(`Server is up and running on port ${port}`);
 });
 
 // understand this!!
