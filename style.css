@@ -121,7 +121,11 @@ h2 {
 }
 h3 {
     text-align: center;
-    padding-top: 30%;
+    padding-top: 30px;
+    color: #760428;
+    font-family: 'Playfair Display',serif;
+}
+h5 {
     color: #760428;
     font-family: 'Playfair Display',serif;
 }
