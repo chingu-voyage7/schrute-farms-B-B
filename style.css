@@ -211,7 +211,7 @@ footer {
 }
 .room-tile img {
   margin-top: 15px;
-  margin-left: 50px;
+  /* margin-left: 50px;  */
   float: left;
   width: 284px;
   height: 212px;
@@ -336,6 +336,35 @@ iframe {
   margin: 0;
 }
 
+/* --- Amenities Page ---- */
+
+#events-grid-container {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: repeat(3, auto);
+  justify-items: center;
+  grid-column-gap: 30px;
+  grid-row-gap: 40px;
+  grid-template-areas:
+    "amenitypic1 amenitydescr1"
+    "amenitypic2 amenitydescr2"
+    "amenitypic3 amenitydescr3";
+}
+
+#services-grid-container {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: repeat(4, auto);
+  justify-items: center;
+  grid-column-gap: 30px;
+  grid-row-gap: 40px;
+  grid-template-areas:
+    "servicespic1 servicesdescr1"
+    "servicespic2 servicesdescr2"
+    "servicespic3 servicesdescr3"
+    "servicespic4 servicesdescr4";
+}
+
 /* --- Room Page ---- */
 
 #rooms-title-box {
@@ -391,5 +420,30 @@ iframe {
       "roomdescr2"
       "roompic3"
       "roomdescr3";
+  }
+
+  #events-grid-container {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas:
+      "amenitypic1 "
+      "amenitydescr1"
+      "amenitypic2"
+      "amenitydescr2"
+      "amenitypic3"
+      "amenitydescr3";
+  }
+  #services-grid-container {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(8, auto);
+    grid-template-areas:
+      "servicespic1"
+      "servicesdescr1"
+      "servicespic2"
+      "servicesdescr2"
+      "servicespic3"
+      "servicesdescr3"
+      "servicespic4"
+      "servicesdescr4";
   }
 }
